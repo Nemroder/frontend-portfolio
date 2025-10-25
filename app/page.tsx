@@ -1,4 +1,4 @@
-import { HeroSection } from "@/components/hero-section"
+import { HeroSectionWrapper } from "@/components/hero-section-wrapper"
 import { AboutSection } from "@/components/about-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { SkillsSection } from "@/components/skills-section"
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="relative">
       <FloatingNav />
-      <HeroSection />
+      <HeroSectionWrapper />
       <div id="about">
         <AboutSection />
       </div>
