@@ -16,11 +16,7 @@ export function FloatingNav() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
+      setIsVisible(window.scrollY > 300)
     }
 
     window.addEventListener("scroll", toggleVisibility)
@@ -48,8 +44,13 @@ export function FloatingNav() {
             <button
               key={index}
               onClick={() => {
-                const element = document.querySelector(item.href)
-                element?.scrollIntoView({ behavior: "smooth" })
+                if (item.href === "#") {
+                  // Scroll al inicio de la página
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+                } else {
+                  const element = document.querySelector(item.href)
+                  element?.scrollIntoView({ behavior: "smooth" })
+                }
               }}
               className="group relative flex items-center justify-center w-12 h-12 rounded-xl hover:bg-accent/10 transition-all duration-300"
               aria-label={item.label}

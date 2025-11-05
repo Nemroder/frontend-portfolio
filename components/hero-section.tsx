@@ -51,7 +51,7 @@ export function HeroSection() {
             <Button
               size="lg"
               onClick={() => setIsModalOpen(true)}
-              className="group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+              className="group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
             >
               <span className="relative z-10 flex items-center gap-2">
                 Hire Me
@@ -63,7 +63,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="px-8 py-6 text-lg rounded-xl border-2 hover:border-accent hover:text-accent transition-all duration-300 bg-transparent"
+              className="px-8 py-6 text-lg rounded-xl border-2 hover:border-accent hover:text-accent transition-all duration-300 bg-transparent cursor-pointer"
               onClick={() => {
                 document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
               }}

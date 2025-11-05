@@ -2,11 +2,12 @@ import { Mail, Github, Linkedin, Phone, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const socials = [
-  { icon: Github, label: "GitHub", href: "https://github.com/sergio-gutierrez" },
+  { icon: Github, label: "GitHub", href: "https://github.com/nemroder" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/sergio-gutierrez-741283277" },
   { icon: Mail, label: "Email", href: "mailto:sergioalejandrogutierrezmedina@gmail.com" },
   { icon: Phone, label: "+57 320 524 9988", href: "tel:+573205249988" },
 ]
+
 
 export function ContactSection() {
   return (

@@ -3,31 +3,31 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
-    title: "Custom Shopify E-Commerce Stores",
+    title: "Angular E-Commerce Web App",
     description:
-      "Designed and developed custom Shopify themes with third-party integrations for payment gateways, shipping, and analytics. Optimized performance and user experience to boost conversion rates.",
-    image: "/modern-ecommerce-interface.png",
-    tags: ["Shopify", "JavaScript", "CSS3", "Performance Optimization"],
-    github: "#",
-    demo: "#",
+      "Developed a custom e-commerce platform using Angular, featuring modular architecture, authentication, and product management. Integrated local storage for cart persistence and optimized performance and user experience for faster navigation and higher engagement.",
+    image: "/ecommerce.png",
+    tags: ["Angular", "TypeScript", "RxJS", "Local Storage API"],
+    github: "https://github.com/Nemroder/angular-ecommerce",
+    demo: "https://angular-ecommerce-ashy.vercel.app/",
   },
   {
-    title: "Progressive Web Applications",
+    title: "Wordle Game",
     description:
-      "Contributed to building PWAs using modern front-end and back-end technologies, focusing on code quality, maintainability, and performance improvements.",
-    image: "/ai-analytics-dashboard-dark-theme.jpg",
-    tags: ["React", "Node.js", "PWA", "Agile"],
-    github: "#",
-    demo: "#",
+      "Developed an interactive Wordle-style game using JavaScript and RxJS. Implemented keyboard input handling, dynamic UI updates, and game state logic to deliver a smooth and engaging experience.",
+    image: "/wordle.png",
+    tags: ["JavaScript", "RxJS", "Game Logic", "Frontend"],
+    github: "https://github.com/Nemroder/wordle-Game",
+    demo: "https://myproject-wordlegame.vercel.app/",
   },
   {
-    title: "Multimedia Design Projects",
+    title: "TaskFlow – SaaS Project Management Platform",
     description:
-      "Created engaging multimedia content and web designs using Adobe Creative Suite, combining technical skills with creative design principles.",
-    image: "/social-media-app-interface-mobile.jpg",
-    tags: ["Adobe Photoshop", "Illustrator", "Premiere Pro", "UI/UX"],
-    github: "#",
-    demo: "#",
+      "Developed a modern SaaS project management platform featuring Supabase authentication, real-time dashboards, Kanban-based task management, live chat with Realtime subscriptions, and a fully responsive design inspired by Linear and Notion. All data is protected with Row Level Security policies.",
+    image: "/taskflow.png",
+    tags: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS", "Realtime", "SaaS"],
+    github: "https://github.com/Nemroder/taskflow-app",
+    demo: "https://taskflow-app-green.vercel.app/" 
   },
 ]
 
@@ -74,21 +74,36 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 rounded-lg hover:border-accent hover:text-accent transition-all duration-300 bg-transparent"
+                    <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
                   >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="flex-1 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300"
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full rounded-lg hover:border-accent hover:text-accent transition-all duration-300 bg-transparent cursor-pointer"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      Code
+                    </Button>
+                  </a>
+
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
                   >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Demo
-                  </Button>
+                    <Button
+                      size="sm"
+                      className="w-full rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 cursor-pointer"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Demo
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -99,7 +114,7 @@ export function ProjectsSection() {
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="relative overflow-hidden aspect-video lg:aspect-auto">
               <img
-                src="/portfolio-website-design-showcase.jpg"
+                src="/portfolio_website.png"
                 alt="Portfolio Website"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -123,13 +138,20 @@ export function ProjectsSection() {
                 ))}
               </div>
               <div className="flex gap-3">
-                <Button
-                  variant="outline"
-                  className="rounded-lg hover:border-accent hover:text-accent transition-all duration-300 bg-transparent"
+                <a
+                  href="https://github.com/Nemroder/frontend-portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block w-full"
                 >
-                  <Github className="w-4 h-4 mr-2" />
-                  View Code
-                </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full rounded-lg hover:border-accent hover:text-accent transition-all duration-300 bg-transparent cursor-pointer"
+                  >
+                    <Github className="w-4 h-4 mr-2" />
+                    View Code
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
